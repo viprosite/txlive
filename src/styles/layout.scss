@@ -1,0 +1,23 @@
+.layout{
+    .layout__side-bar{}
+    .main{
+        .main__top, .main__content{
+            display: flex;
+            
+        }
+        .main__top{
+            height: 50px;
+            width: 100%;
+            justify-content: flex-end;
+            .top-bar{
+                height:100%;
+            }
+        }
+        .main__content{
+            height: calc(100vh - 50px);
+            width: 100%;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+    }
+}
