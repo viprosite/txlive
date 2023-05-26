@@ -19,7 +19,7 @@ let isCollapse = computed(() => {
 
 <style lang="scss">
 .logo {
-    padding: 12px 0;
+    padding: 6px 0;
     display: flex;
     justify-content: center;
     align-content: center;

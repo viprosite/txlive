@@ -14,6 +14,13 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-undef': 'off'
+    'no-undef': 'warn',
+    'no-useless-escape': 'warn',
+    'no-control-regex': 'warn',
+    'no-empty': 'warn',
+    'no-prototype-builtins': 'warn',
+    '@typescript-eslint/no-array-constructor': 'warn',
+    'use-isnan': 'warn',
+    '@typescript-eslint/no-loss-of-precision': 'warn'
   }
 }

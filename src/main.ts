@@ -12,3 +12,12 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component);
 }
 app.use(store, key).use(router).use(ElementPlus).mount("#app");
+
+import { stringReg, dateReg, moneyReg, numberReg } from "@/utils/regexp";
+console.log(dateReg.birth("1910-12-12"));
+
+console.log(numberReg.positive("1"));
+
+// import { parseInt } from "@/utils/functions/core/number";
+
+// console.log(parseInt);
