@@ -2,13 +2,12 @@
     .layout__side-bar{}
     .main{
         .main__top, .main__content{
-            display: flex;
+            // display: flex;
             
         }
         .main__top{
             height: 50px;
             width: 100%;
-            justify-content: flex-end;
             .top-bar{
                 height:100%;
             }

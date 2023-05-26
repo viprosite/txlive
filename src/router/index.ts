@@ -14,6 +14,24 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: "/live",
+    name: "live",
+    component: Layout,
+    redirect: "/live/list",
+    children: [
+      {
+        path: "list",
+        name: "liveList",
+        component: () => import("@/views/live/liveList.vue"),
+      },
+    ],
+  },
+  {
+    path: "/:pathMatch(.*)",
+    name: "404",
+    component: () => import("@/views/404.vue"),
+  },
 ];
 
 const router = createRouter({

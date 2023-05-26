@@ -4,7 +4,7 @@
             <TopBar />
         </div>
         <div class="main__content">
-            content
+            <router-view></router-view>
         </div>
     </div>
 </template>

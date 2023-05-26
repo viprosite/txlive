@@ -7,8 +7,9 @@
                 <Fold v-else />
             </el-icon>
         </div>
-        <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" :collapse-transition="false">
-            <el-sub-menu index="1">
+        <el-menu default-active="/" class="el-menu-vertical-demo" :collapse="isCollapse" :collapse-transition="false"
+            :router="true">
+            <el-sub-menu index="/">
                 <template #title>
                     <el-icon>
                         <location />
@@ -24,11 +25,17 @@
                     <el-menu-item index="1-4-1">item one</el-menu-item>
                 </el-sub-menu>
             </el-sub-menu>
-            <el-menu-item index="2">
+            <!-- <el-menu-item index="2">
                 <el-icon>
                     <document />
                 </el-icon>
                 <template #title>Navigator Two</template>
+            </el-menu-item> -->
+            <el-menu-item index="/live">
+                <el-icon>
+                    <document />
+                </el-icon>
+                <template #title>直播间列表</template>
             </el-menu-item>
         </el-menu>
     </div>
@@ -47,6 +54,9 @@ let isCollapse = computed(() => {
 })
 let handleToggleMenu = (): void => {
     store.commit('toggleMenuIsCollapse')
+}
+let handleLiveList = (): void => {
+    this.$router.push({ path: '/live/list' })
 }
 
 
