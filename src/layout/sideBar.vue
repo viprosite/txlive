@@ -35,7 +35,7 @@
                 <el-icon>
                     <document />
                 </el-icon>
-                <template #title>直播间列表</template>
+                <template #title>live</template>
             </el-menu-item>
         </el-menu>
     </div>
