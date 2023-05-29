@@ -14,7 +14,7 @@ const files = require.context("./modules", false, /\.ts$/);
 files.keys().forEach((key) => {
   modules[key.replace(/\.\/(.*)\.ts/, "$1")] = files(key).default || files(key);
 });
-console.log(modules);
+// console.log(modules);
 export default createStore({
   modules,
 });

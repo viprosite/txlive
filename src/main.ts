@@ -18,6 +18,6 @@ console.log(dateReg.birth("1910-12-12"));
 
 console.log(numberReg.positive("1"));
 
-// import { parseInt } from "@/utils/functions/core/number";
-
+// import { arrayMin } from "@/utils/functions/core/array";
+// arrayMin
 // console.log(parseInt);

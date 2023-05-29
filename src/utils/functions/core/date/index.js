@@ -1,5 +1,5 @@
-import { isEmpty, isNull, isInteger, isDate, isString } from "../core/validate";
-import { parseInt } from "../core/number";
+import { isEmpty, isNull, isInteger, isDate, isString } from "../validate";
+import { parseInt } from "../number";
 
 /* 快捷日期 */
 

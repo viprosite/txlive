@@ -7,6 +7,8 @@ import * as stringUtil from "./string";
 import * as numberUtil from "./number";
 // 数组
 import * as arrayUtil from "./array";
+// 日期
+import * as dateUtil from "./date";
 // 对象
 import * as objectUtil from "./object";
 // 函数
@@ -58,6 +60,7 @@ export default {
   ...numberUtil,
   // 数组
   ...arrayUtil,
+  ...dateUtil,
   // 对象
   ...objectUtil,
   // 函数

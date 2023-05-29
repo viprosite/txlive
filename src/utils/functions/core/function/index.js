@@ -1,4 +1,4 @@
-import { parseDate } from "../../date";
+import { parseDate } from "../date";
 import { isEmpty } from "../validate";
 
 /* 函数处理 */
