@@ -42,12 +42,13 @@
 </template>
 
 <script>
-import TXLive from '@/utils/TXLive'
+import { tomorrow } from '@/utils/functions/core/date'
+import TXLive from '@/utils/live/TXLive'
 
 export default {
     data() {
         return {
-            TXLiveUtil: null,
+            TXLiveInstance: null,
             liveForm: {
                 streamName: '',
                 pushUrl: '',
@@ -74,6 +75,9 @@ export default {
     computed: {
 
     },
+    beforeCreate() {
+
+    },
     mounted() {
         this.TXLiveUtil = new TXLive()
         this.TXLiveUtil._initSdkScript().then(() => {
@@ -82,8 +86,7 @@ export default {
             this.TXLiveUtil.checkDeviceSupport().then(res => {
                 console.log(res)
             })
-            let devices = this.TXLiveUtil.deviceManager()
-            console.log(devices)
+            console.log(this.TXLiveUtil.livePusher.getDeviceManager());
             this.init()
         })
         // this.init()
@@ -102,7 +105,7 @@ export default {
             const appName = 'live'
             const streamName = this.liveForm.streamName
             const pushKey = 'ce809c0d9d6ebab8ca9b9b93453c07dd'
-            let pushPullUrl = this.TXLiveUtil.createPushPullUrl({ pushHost, pullHost, appName, streamName, expireDate: Date.now() + 24 * 60 * 60, pushKey, pullKey: '' })  // 过期时间默认24小时后
+            let pushPullUrl = this.TXLiveInstance.createPushPullUrl({ pushHost, pullHost, appName, streamName, expireDate: Date.now() + 24 * 60 * 60, pushKey, pullKey: '' })  // 过期时间默认24小时后
             this.liveForm.pushUrl = pushPullUrl.pushUrl
             this.liveForm.pullUrl = []
             this.liveForm.pullUrl.push(...pushPullUrl.pullUrls)
